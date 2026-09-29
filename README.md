@@ -1,0 +1,68 @@
+# GalMaster 한국어 패치
+
+Steam판 **GalMaster** 비공식 한국어 패치 저장소입니다.
+
+첫 정식 배포 버전은 `v1.0.0`이며 Steam 앱 ID `4513880`, 빌드 `24775635`, Windows x64 환경을 대상으로 합니다.
+
+## 저장소 구성
+
+- `src/`: 런타임 한국어 패치 소스
+- `package/`: 한국어 번역·이미지·폰트 및 배포 런타임
+- `installer/`: 공용 규격 GUI 설치기 소스·이미지·지원 파일 해시
+- `distribution/`: 설치·복구 안내, 라이선스와 변경 파일 목록
+- `scripts/`: 빌드·패키징 스크립트
+
+<details><summary>새 버전 배포</summary>
+
+Windows의 .NET Framework C# 컴파일러와 정품 게임의 Managed DLL이 필요합니다.
+`powershell -ExecutionPolicy Bypass -File scripts/build-distributions.ps1 -GamePath "게임 설치 폴더"`를 실행합니다.
+게임 참조 DLL은 저장소에 넣지 않습니다. 결과는 `build` 아래 생성됩니다.
+
+</details>
+
+## 배포본
+
+[최신 릴리스](https://github.com/etashi04/GalMaster/releases/latest)에서 다운로드하세요.
+
+- `GalMaster_Korean_Patch_v1.0.0.zip`: GUI 자동 설치·복구판
+- `GalMaster_Korean_Patch_Manual_v1.0.0.zip`: 직접 복사하는 수동 설치판
+- `SHA256SUMS.txt`: ZIP 무결성 확인용 SHA-256
+
+게임을 종료한 상태에서 둘 중 하나만 설치하세요.
+
+## 확인된 범위
+
+- 본편 대사·선택지, 메뉴·설정 및 확인창, 저장/불러오기 표시
+- 휴대전화 이미지 111종(해상도별 129개 텍스처)
+- 한국어 폰트·문장부호·자막 외곽선과 엔딩·보너스 영상 자막
+- 사용자 전체 플레이 검수와 종료·스킵·초기화 확인창 175프레임 검사(중국어 검출 0건)를 진행했습니다. 최종 자동 설치기 화면·고배율 표시 및 최종 배포 ZIP의 전체 설치·복구 재검증은 미완료입니다.
+- [패치 변경 파일 목록](distribution/FILES.tsv). 게임 원본 파일과 저장 데이터는 포함하지 않습니다.
+
+## 자동 설치
+
+1. 자동 ZIP을 모두 압축 해제합니다.
+2. `GalMaster 한국어 패치 v1.0.0.exe`를 실행합니다.
+3. `GAL PRO MASTER.exe`가 있는 게임 폴더를 선택하고 **한국어 패치 설치**를 누릅니다.
+4. 완료 후 Steam에서 게임을 실행합니다. 언어는 **중국어 간체**를 유지합니다.
+
+## 수동 설치
+
+1. 수동 ZIP을 모두 압축 해제합니다.
+2. 기존 모드가 있다면 `BepInEx`, `winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`을 별도 백업합니다.
+3. `패치파일` **안의 내용 전체**를 `GAL PRO MASTER.exe`가 있는 폴더에 복사·병합·덮어씁니다.
+4. Steam에서 게임을 실행합니다. 언어는 **중국어 간체**를 유지합니다.
+
+## 복구
+
+- 자동판: 동일 설치기의 **원본 복구**. 게임 폴더의 `_KR_PATCH_v1.0.0` 백업 폴더를 복구 전까지 보존하세요. 패치 또는 백업의 외부 변경이 감지되면 중단합니다.
+- 수동판: 복사한 파일을 제거하고 설치 전 백업을 복원합니다. 다른 모드가 없는 순정 설치였다면 `BepInEx`, `winhttp.dll`, `doorstop_config.ini`, `.doorstop_version`을 제거합니다.
+- 다른 모드가 있다면 `BepInEx` 전체를 삭제하지 마세요. 자동 복구 후 실행 중 생성된 로그·캐시·설정은 남을 수 있습니다.
+
+## 주의
+
+- 비공식 팬 번역입니다. 정품 게임이 필요하며 게임 및 편집 이미지의 권리는 원권리자에게 있습니다.
+- 원본 영상 위에 한국어 자막을 추가하므로 영상의 중국어 문구는 그대로 남습니다.
+- 다른 빌드·운영체제 및 다른 모드와의 병용은 미검증입니다. 기존 시험판은 먼저 복구하세요.
+- 게임 업데이트 후 호환되지 않을 수 있습니다. 첫 실행은 초기화로 더 오래 걸릴 수 있습니다.
+- [제3자 라이선스 전문](distribution/제3자_라이선스_고지.txt): BepInEx, HarmonyX, MonoMod, Mono.Cecil, Unity Doorstop, 나눔스퀘어라운드.
+- [문제 제보](https://github.com/etashi04/GalMaster/issues)에 장면·재현 순서·게임 빌드를 남겨 주세요. 로그의 개인 경로는 지워 주세요.

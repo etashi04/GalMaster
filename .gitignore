@@ -1,0 +1,6 @@
+﻿build/
+*.pdb
+*.log
+*.tmp
+.vs/
+__pycache__/
