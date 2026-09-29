@@ -4,7 +4,12 @@ Steam판 **GalMaster** 비공식 한국어 패치 저장소입니다.
 
 첫 정식 배포 버전은 `v1.0.0`이며 Steam 앱 ID `4513880`, 빌드 `24775635`, Windows x64 환경을 대상으로 합니다.
 
-## 다운로드
+<img width="1920" height="1080" alt="2000A0~1" src="https://github.com/user-attachments/assets/891ce82d-c03a-47b2-bb69-a785d5033252" />
+<img width="1920" height="1080" alt="20A6F7~1" src="https://github.com/user-attachments/assets/3f2bd801-7293-4d07-97e8-55c8650d7fee" />
+<img width="1920" height="1080" alt="202609~3" src="https://github.com/user-attachments/assets/509c37a3-c7f0-4a03-8b1d-b9d50629f3a1" />
+
+
+## 배포본
 
 [최신 릴리스](https://github.com/etashi04/GalMaster/releases/latest)에서 다운로드하세요.
 
@@ -13,14 +18,6 @@ Steam판 **GalMaster** 비공식 한국어 패치 저장소입니다.
 - `SHA256SUMS.txt`: ZIP 무결성 확인용 SHA-256
 
 게임을 종료한 상태에서 둘 중 하나만 설치하세요.
-
-## 패치 내용
-
-- 본편 대사·선택지, 메뉴·설정 및 확인창, 저장/불러오기 표시
-- 휴대전화 이미지 111종(해상도별 129개 텍스처)
-- 한국어 폰트·문장부호·자막 외곽선과 엔딩·보너스 영상 자막
-- 사용자 전체 플레이 검수를 진행했습니다. 최종 자동 설치기 화면·고배율 표시 및 최종 배포 ZIP의 전체 설치·복구 재검증은 미완료입니다.
-- 게임 원본 파일과 저장 데이터는 포함하지 않습니다.
 
 ## 자동 설치
 
