@@ -46,6 +46,3 @@ Steam판 **GalMaster** 비공식 한국어 패치 저장소입니다.
 - 다른 빌드·운영체제 및 다른 모드와의 병용은 미검증입니다. 기존 시험판은 먼저 복구하세요.
 - 게임 업데이트 후 호환되지 않을 수 있습니다. 첫 실행은 초기화로 더 오래 걸릴 수 있습니다.
 - [제3자 라이선스 전문](distribution/제3자_라이선스_고지.txt): BepInEx, HarmonyX, MonoMod, Mono.Cecil, Unity Doorstop, 나눔스퀘어라운드.
-- [문제 제보](https://github.com/etashi04/GalMaster/issues)에 장면·재현 순서·게임 빌드를 남겨 주세요. 로그의 개인 경로는 지워 주세요.
-
-저장소 구성과 빌드 방법은 [개발 문서](DEVELOPMENT.md)를 참고하세요.
